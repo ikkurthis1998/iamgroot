@@ -16,16 +16,10 @@ function clickEventHandler() {
 
     var inputText = inputTextElement.value;
     var finalURL = URL(inputText);
-//     fetch(finalURL)
-//         .then(response => response.json())
-//         .then(json => {outputTextElement.innerText = json.contents.translated})
-//         .catch(errorHandle());
     fetch(finalURL)
         .then(response => response.json())
-        .then(json => {
-            outputTextElement.innerText = json.contents.translated;
-        })
-        .catch(() => alert("some error occured"))
+        .then(json => {outputTextElement.innerText = json.contents.translated})
+        .catch(() => errorHandle());
 }
 
 
