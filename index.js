@@ -23,7 +23,7 @@ function clickEventHandler() {
     fetch(finalURL)
         .then(response => response.json())
         .then(json => {outputTextElement.innerText = json.contents.translated})
-        .catch(errorHandle());;
+        .catch(errorHandle());
 }
 
 
