@@ -14,10 +14,6 @@ function errorHandle(error) {
 
 function clickEventHandler() {
 
-    function output(response) {
-        response = response.json();
-    }
-
     var inputText = inputTextElement.value;
     var finalURL = URL(inputText);
     fetch(finalURL)
